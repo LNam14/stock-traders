@@ -1,11 +1,12 @@
 "use client"
+import Link from 'next/link'
 import { Menu, Package2 } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import DarkModeToggle from '@/components/dark-mode-toggle'
 import NavItems from '@/app/(public)/nav-items'
+import Image from 'next/image'
 import { Box, Button, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 
 export default function Layout({
     children
@@ -21,7 +22,7 @@ export default function Layout({
             <header style={{ backgroundColor: '#221c38' }} className='sticky flex h-20 items-center gap-4   px-4 md:px-6'>
                 <nav className='hidden flex justify-around w-full flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6'>
                     <Link href='#' className='flex items-center gap-2 text-lg font-semibold md:text-base'>
-                        <img src="/images/flash.png" alt="" /><span style={{ fontSize: 20, width: 30, height: 30, }}>GoStock</span>
+                        <Image width={30} height={30} src="/images/flash.png" alt="" /><span style={{ fontSize: 20 }}>GoStock</span>
                     </Link>
                     <Box>
                         <NavItems className='text-white transition-colors hover:text-gray-400 flex-shrink-0 m-5 md:text-[14px] lg:text-[16px]' />
@@ -65,11 +66,11 @@ export default function Layout({
                             <img src="/images/flash_black.png" alt="" /><span className="text-2xl ml-2">GoStock</span>
                         </div>
                         <div className="text-black mt-8">
-                            <Typography className="lg:text-xl">Technology Park</Typography>
-                            <Typography className="lg:text-xl">8-14 Marie Cuire Street</Typography>
-                            <Typography className="lg:text-xl">08042 Barcelona</Typography>
+                            <Typography className="lg:text-[16px]">Technology Park</Typography>
+                            <Typography className="lg:text-[16px]">8-14 Marie Cuire Street</Typography>
+                            <Typography className="lg:text-[16px]">08042 Barcelona</Typography>
                             <div className="mt-10">
-                                <Link href='#' className="lg:text-xl font-semibold"><u>gostrock@example.com</u></Link>
+                                <Link href='#' className="lg:text-[16px] font-semibold"><u>gostrock@example.com</u></Link>
                             </div>
                         </div>
                     </div>
@@ -78,12 +79,12 @@ export default function Layout({
                             <Typography className="text-2xl mt-2 md:mt-0 font-semibold">Platform</Typography>
                         </div>
                         <div className="text-black mt-8">
-                            <Typography className="lg:text-xl mt-2">Analytics</Typography>
-                            <Typography className="lg:text-xl mt-2">Planning</Typography>
-                            <Typography className="lg:text-xl mt-2">Collaboration</Typography>
-                            <Typography className="lg:text-xl mt-2">Data Management</Typography>
-                            <Typography className="lg:text-xl mt-2">Integrations</Typography>
-                            <Typography className="lg:text-xl mt-2">Security</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Analytics</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Planning</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Collaboration</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Data Management</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Integrations</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Security</Typography>
                         </div>
                     </div>
                     <div>
@@ -91,11 +92,11 @@ export default function Layout({
                             <Typography className="text-2xl mt-2 md:mt-0 font-semibold">Resources</Typography>
                         </div>
                         <div className="text-black mt-8">
-                            <Typography className="lg:text-xl mt-2">Customers</Typography>
-                            <Typography className="lg:text-xl mt-2">Strategic Finance</Typography>
-                            <Typography className="lg:text-xl mt-2">Ebook & Guides</Typography>
-                            <Typography className="lg:text-xl mt-2">Webinars & Events</Typography>
-                            <Typography className="lg:text-xl mt-2">Podcast & Video</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Customers</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Strategic Finance</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Ebook & Guides</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Webinars & Events</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Podcast & Video</Typography>
                         </div>
                     </div>
                     <div>
@@ -103,11 +104,11 @@ export default function Layout({
                             <Typography className="text-2xl mt-2 md:mt-0 font-semibold">Solutions</Typography>
                         </div>
                         <div className="text-black mt-8">
-                            <Typography className="lg:text-xl mt-2">Financial</Typography>
-                            <Typography className="lg:text-xl mt-2">Investors & CEOs</Typography>
-                            <Typography className="lg:text-xl mt-2">Revenue Operations</Typography>
-                            <Typography className="lg:text-xl mt-2">Sales & Marketing</Typography>
-                            <Typography className="lg:text-xl mt-2">Human Resource</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Financial</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Investors & CEOs</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Revenue Operations</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Sales & Marketing</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Human Resource</Typography>
                         </div>
                     </div>
                     <div>
@@ -115,12 +116,12 @@ export default function Layout({
                             <Typography className="text-2xl mt-2 md:mt-0 font-semibold">Resources</Typography>
                         </div>
                         <div className="text-black mt-8">
-                            <Typography className="lg:text-xl mt-2">Customers</Typography>
-                            <Typography className="lg:text-xl mt-2">Strategic Finance</Typography>
-                            <Typography className="lg:text-xl mt-2">Ebook & Guides</Typography>
-                            <Typography className="lg:text-xl mt-2">Webinars & Events</Typography>
-                            <Typography className="lg:text-xl mt-2">Podcast & Video</Typography>
-                            <Typography className="lg:text-xl mt-2">Matrics Catalog</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Customers</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Strategic Finance</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Ebook & Guides</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Webinars & Events</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Podcast & Video</Typography>
+                            <Typography className="lg:text-[16px] mt-2">Matrics Catalog</Typography>
                         </div>
                     </div>
                 </div>
