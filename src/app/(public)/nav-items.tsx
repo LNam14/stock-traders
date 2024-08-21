@@ -1,8 +1,4 @@
-'use client'
-
-import { getAccessTokenFormLocalStorage } from '@/lib/utils'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 const menuItems = [
     {
@@ -27,12 +23,8 @@ const menuItems = [
 ]
 
 export default function NavItems({ className }: { className?: string }) {
-    const [isAuth, setIsAuth] = useState(false)
-    useEffect(() => {
-        setIsAuth(Boolean(getAccessTokenFormLocalStorage()))
-    }, [])
+
     return menuItems.map((item) => {
-        if (item.authRequired === false && isAuth || item.authRequired === true && !isAuth) return null
         return (
             <Link href={item.href} key={item.href} className={className}>
                 {item.title}
