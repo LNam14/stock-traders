@@ -49,6 +49,14 @@ export default function Layout({
                                 <Image width={30} height={30} src="/images/flash.png" alt="" /><span style={{ fontSize: 20 }}>GoStock</span>
                             </Link>
                             <NavItems className='flex flex-col mt-10 text-muted-foreground transition-colors hover:text-foreground' />
+                            <Box>
+                                <Button onClick={onLogin} color="primary" className="rounded-full normal-case md:w-[80px] lg:w-[110px] font-normal lg:h-[40px] md:h-[35px] bg-[#221c38] text-white md:text-[14px] lg:text-[16px]">
+                                    Login
+                                </Button>
+                                <Button onClick={onLogin} color="primary" className="rounded-full normal-case md:w-[80px] lg:w-[110px] font-normal lg:h-[40px] md:h-[35px] bg-[#3b3356] text-white md:text-[14px] lg:text-[16px] ml-5">
+                                    Sign Up
+                                </Button>
+                            </Box>
                         </nav>
                     </SheetContent>
                 </Sheet>
