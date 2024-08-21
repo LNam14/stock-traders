@@ -1,0 +1,8 @@
+.transition-border-radius {
+    transition: border-radius 1s ease-in-out;
+    /* Adjust duration and easing as needed */
+}
+
+.background-gradient {
+    background: linear-gradient(to right, #3e2b89, #221c38);
+}
