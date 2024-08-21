@@ -98,8 +98,8 @@ const LoginPage: React.FC = () => {
 
     return (
         <div className="bg-gray-100 flex items-center justify-center min-h-screen">
-            <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-3xl h-[60vh]">
-                <div className={`absolute top-0 left-0 w-1/2 h-full transition-transform duration-500 ease-in-out ${!isActive ? 'translate-x-full' : 'translate-x-0'}`}>
+            <div className="md:relative bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-3xl h-[65vh] md:h-[60vh]">
+                <div className={`md:absolute top-0 left-0 w-full md:w-1/2 h-full transition-transform duration-500 ease-in-out ${!isActive ? 'md:translate-x-full' : 'md:translate-x-0'}`}>
                     <div className="h-full flex items-center justify-center">
                         <Form
                             form={form}
@@ -116,7 +116,7 @@ const LoginPage: React.FC = () => {
                                 >
                                     <Input
                                         placeholder="Name"
-                                        className="bg-[#E7E7E7] text-[#6E6E6E] rounded-lg p-3 mb-2 w-[200px] w-[300px] text-sm outline-none"
+                                        className="bg-[#E7E7E7] text-[#6E6E6E] rounded-lg p-3 mb-2 w-[300px] text-sm outline-none"
                                     />
                                 </Form.Item>
                             )}
@@ -126,7 +126,7 @@ const LoginPage: React.FC = () => {
                             >
                                 <Input
                                     placeholder="Email"
-                                    className="bg-[#E7E7E7] text-[#6E6E6E] rounded-lg p-3 mb-2 w-[200px] md:w-[300px] text-sm outline-none"
+                                    className="bg-[#E7E7E7] text-[#6E6E6E] rounded-lg p-3 mb-2 w-[300px] text-sm outline-none"
                                 />
                             </Form.Item>
                             <Form.Item
@@ -135,27 +135,34 @@ const LoginPage: React.FC = () => {
                             >
                                 <Input.Password
                                     placeholder="Password"
-                                    className="bg-[#E7E7E7] text-[#6E6E6E] rounded-lg p-3 mb-2 w-[200px] md:w-[300px] text-sm outline-none"
+                                    className="bg-[#E7E7E7] text-[#6E6E6E] rounded-lg p-3 mb-2 w-[300px] text-sm outline-none"
                                 />
                             </Form.Item>
                             {isActive && (
-                                <span onClick={handleForgotPassword} className="cursor-pointer text-sm text-[#909090] mb-2 mt-2">Forgot Password?</span>
+                                <span onClick={handleForgotPassword} className="cursor-pointer text-sm text-[#909090] mb-2">Forgot Password?</span>
                             )}
                             {error && <p className="text-red-500 mb-2">{error}</p>}
                             <Form.Item>
                                 <Button
                                     type="primary"
                                     htmlType="submit"
-                                    className="w-[200px] md:w-[300px] h-10 background-gradient text-white text-sm px-12 py-2 mt-2 rounded-lg cursor-pointer"
+                                    className="w-[300px] h-10 background-gradient text-white text-sm px-12 py-2 mt-2 rounded-lg cursor-pointer"
                                     loading={loading}
                                 >
                                     {isActive ? "Sign In" : "Sign Up"}
+                                </Button>
+                                <Button
+                                    type="default"
+                                    onClick={handleToggle}
+                                    className="text-sm px-12 w-[300px] md:hidden py-2 mt-2 rounded-lg cursor-pointer"
+                                >
+                                    {isActive ? "Sign Up" : "Sign In"}
                                 </Button>
                             </Form.Item>
                         </Form>
                     </div>
                 </div>
-                <div className={`absolute top-0 ${!isActive ? 'rounded-r-full' : 'rounded-l-full'} right-0 w-1/2 h-full transition-transform duration-500 ease-in-out ${!isActive ? '-translate-x-full' : 'translate-x-0'} transitionus bg-[#606bfa] background-gradient text-white`}>
+                <div className={`absolute top-0 ${!isActive ? 'rounded-r-full' : 'rounded-l-full'} right-0 hidden md:block md:w-1/2 h-full transition-transform duration-500 ease-in-out ${!isActive ? '-translate-x-full' : 'translate-x-0'} transitionus bg-[#606bfa] background-gradient text-white`}>
                     <div className="flex flex-col items-center justify-center h-full text-center p-8">
                         <h1 className="text-2xl font-bold mb-4">{isActive ? "Hello, Friend" : "Welcome Back!"}</h1>
                         <p className="text-sm mb-4">Enter your personal details to use all of site features</p>
