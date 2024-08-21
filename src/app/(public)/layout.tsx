@@ -45,18 +45,13 @@ export default function Layout({
                     </SheetTrigger>
                     <SheetContent side='left'>
                         <nav className='grid gap-6 text-lg font-medium'>
-                            <Link href='#' className='flex items-center gap-2 text-lg font-semibold'>
-                                <Package2 className='h-6 w-6' />
-                                <span className='sr-only'>Big boy</span>
+                            <Link href='#' className='flex items-center gap-2 text-lg font-semibold md:text-base'>
+                                <Image width={30} height={30} src="/images/flash.png" alt="" /><span style={{ fontSize: 20 }}>GoStock</span>
                             </Link>
-
-                            <NavItems className='text-muted-foreground transition-colors hover:text-foreground' />
+                            <NavItems className='flex flex-col mt-10 text-muted-foreground transition-colors hover:text-foreground' />
                         </nav>
                     </SheetContent>
                 </Sheet>
-                {/* <div className='ml-auto'>
-          <DarkModeToggle />
-        </div> */}
             </header>
             <main className='flex flex-1 flex-col gap-4 md:gap-8'>{children}</main>
             <footer className="w-full flex-col items-center flex justify-center text-black mt-6">
