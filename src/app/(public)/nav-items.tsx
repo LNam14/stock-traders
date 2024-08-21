@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 const menuItems = [
     {
@@ -20,15 +20,16 @@ const menuItems = [
         href: '#',
         authRequired: true
     }
-]
+];
 
 export default function NavItems({ className }: { className?: string }) {
-
-    return menuItems.map((item) => {
-        return (
-            <Link href={item.href} key={item.href} className={className}>
-                {item.title}
-            </Link>
-        )
-    })
+    return (
+        <div>
+            {menuItems.map((item) => (
+                <Link href={item.href} key={item.href} className={className}>
+                    {item.title}
+                </Link>
+            ))}
+        </div>
+    );
 }
